@@ -25,10 +25,10 @@ Partial Class Form1
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.OpenToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SaveAsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PrintToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PrintReviewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.OpenToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.FontToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ColorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StyleAndSizeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -60,6 +60,12 @@ Partial Class Form1
         Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(46, 24)
         Me.OpenToolStripMenuItem.Text = "File"
         '
+        'OpenToolStripMenuItem1
+        '
+        Me.OpenToolStripMenuItem1.Name = "OpenToolStripMenuItem1"
+        Me.OpenToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
+        Me.OpenToolStripMenuItem1.Text = "Open"
+        '
         'SaveAsToolStripMenuItem
         '
         Me.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
@@ -78,12 +84,6 @@ Partial Class Form1
         Me.PrintReviewToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.PrintReviewToolStripMenuItem.Text = "Print Review"
         '
-        'OpenToolStripMenuItem1
-        '
-        Me.OpenToolStripMenuItem1.Name = "OpenToolStripMenuItem1"
-        Me.OpenToolStripMenuItem1.Size = New System.Drawing.Size(224, 26)
-        Me.OpenToolStripMenuItem1.Text = "Open"
-        '
         'FontToolStripMenuItem
         '
         Me.FontToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ColorToolStripMenuItem, Me.StyleAndSizeToolStripMenuItem})
@@ -94,13 +94,13 @@ Partial Class Form1
         'ColorToolStripMenuItem
         '
         Me.ColorToolStripMenuItem.Name = "ColorToolStripMenuItem"
-        Me.ColorToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ColorToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
         Me.ColorToolStripMenuItem.Text = "Color"
         '
         'StyleAndSizeToolStripMenuItem
         '
         Me.StyleAndSizeToolStripMenuItem.Name = "StyleAndSizeToolStripMenuItem"
-        Me.StyleAndSizeToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.StyleAndSizeToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
         Me.StyleAndSizeToolStripMenuItem.Text = "Style And Size"
         '
         'RichTextBox1
@@ -117,6 +117,12 @@ Partial Class Form1
         Me.OpenFileDialog1.Filter = "Text files (*.txt)|*.txt"
         Me.OpenFileDialog1.InitialDirectory = "D:\"
         Me.OpenFileDialog1.RestoreDirectory = True
+        '
+        'SaveFileDialog1
+        '
+        Me.SaveFileDialog1.Filter = "Text files (*.txt)|*.txt"
+        Me.SaveFileDialog1.InitialDirectory = "D:\"
+        Me.SaveFileDialog1.RestoreDirectory = True
         '
         'PrintDialog1
         '
