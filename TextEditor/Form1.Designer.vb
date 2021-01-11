@@ -49,7 +49,7 @@ Partial Class Form1
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OpenToolStripMenuItem, Me.FontToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(800, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(800, 30)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -106,9 +106,9 @@ Partial Class Form1
         'RichTextBox1
         '
         Me.RichTextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RichTextBox1.Location = New System.Drawing.Point(0, 28)
+        Me.RichTextBox1.Location = New System.Drawing.Point(0, 30)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(800, 422)
+        Me.RichTextBox1.Size = New System.Drawing.Size(800, 420)
         Me.RichTextBox1.TabIndex = 1
         Me.RichTextBox1.Text = ""
         '
@@ -126,6 +126,8 @@ Partial Class Form1
         '
         'PrintDialog1
         '
+        Me.PrintDialog1.AllowSelection = True
+        Me.PrintDialog1.Document = Me.PrintDocument1
         Me.PrintDialog1.UseEXDialog = True
         '
         'PrintPreviewDialog1
@@ -137,6 +139,9 @@ Partial Class Form1
         Me.PrintPreviewDialog1.Icon = CType(resources.GetObject("PrintPreviewDialog1.Icon"), System.Drawing.Icon)
         Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
         Me.PrintPreviewDialog1.Visible = False
+        '
+        'PrintDocument1
+        '
         '
         'Form1
         '

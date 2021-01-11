@@ -1,4 +1,6 @@
-﻿Imports System.IO
+﻿Imports System.Drawing
+Imports System.Drawing.Printing
+Imports System.IO
 Imports System.Windows.Forms
 
 Public Class Form1
@@ -38,5 +40,15 @@ Public Class Form1
     Private Sub ColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ColorToolStripMenuItem.Click
         ColorDialog1.ShowDialog()
         RichTextBox1.ForeColor = ColorDialog1.Color
+    End Sub
+
+    Private Sub PrintToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintToolStripMenuItem.Click
+        If PrintDialog1.ShowDialog() = DialogResult.OK Then
+            PrintDocument1.Print()
+        End If
+    End Sub
+
+    Private Sub PrintDocument1_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        e.Graphics.DrawString(RichTextBox1.Text, FontDialog1.Font, New SolidBrush(ColorDialog1.Color), 20, 20)
     End Sub
 End Class
