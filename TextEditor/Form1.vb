@@ -29,4 +29,14 @@ Public Class Form1
             End Using
         End If
     End Sub
+
+    Private Sub StyleAndSizeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StyleAndSizeToolStripMenuItem.Click
+        FontDialog1.ShowDialog()
+        RichTextBox1.Font = FontDialog1.Font
+    End Sub
+
+    Private Sub ColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ColorToolStripMenuItem.Click
+        ColorDialog1.ShowDialog()
+        RichTextBox1.ForeColor = ColorDialog1.Color
+    End Sub
 End Class

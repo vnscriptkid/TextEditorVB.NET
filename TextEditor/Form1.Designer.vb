@@ -94,13 +94,13 @@ Partial Class Form1
         'ColorToolStripMenuItem
         '
         Me.ColorToolStripMenuItem.Name = "ColorToolStripMenuItem"
-        Me.ColorToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
+        Me.ColorToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.ColorToolStripMenuItem.Text = "Color"
         '
         'StyleAndSizeToolStripMenuItem
         '
         Me.StyleAndSizeToolStripMenuItem.Name = "StyleAndSizeToolStripMenuItem"
-        Me.StyleAndSizeToolStripMenuItem.Size = New System.Drawing.Size(186, 26)
+        Me.StyleAndSizeToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.StyleAndSizeToolStripMenuItem.Text = "Style And Size"
         '
         'RichTextBox1
