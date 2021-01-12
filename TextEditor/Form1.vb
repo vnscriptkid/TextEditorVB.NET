@@ -8,7 +8,7 @@ Public Class Form1
         If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
             Using streamReader As New StreamReader(OpenFileDialog1.FileName)
                 Try
-                    RichTextBox1.Text = streamReader.ReadToEnd()
+                    RichTextBox1.Rtf = streamReader.ReadToEnd()
                 Catch ex As Exception
                     MessageBox.Show(ex.Message, "Info: ", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 End Try
@@ -18,13 +18,11 @@ Public Class Form1
 
     Private Sub SaveAsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveAsToolStripMenuItem.Click
         If SaveFileDialog1.ShowDialog() = DialogResult.OK Then
-            Using streamWriter = File.CreateText(SaveFileDialog1.FileName)
-                Try
-                    streamWriter.Write(RichTextBox1.Text)
-                Catch ex As Exception
-                    MessageBox.Show(ex.Message, "Info: ", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                End Try
-            End Using
+            Try
+                RichTextBox1.SaveFile(SaveFileDialog1.FileName)
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "Info: ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End Try
         End If
     End Sub
 
