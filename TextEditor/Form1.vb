@@ -45,7 +45,9 @@ Public Class Form1
     End Sub
 
     Private Sub PrintDocument1_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PrintDocument1.PrintPage
-        e.Graphics.DrawString(RichTextBox1.Text, FontDialog1.Font, New SolidBrush(ColorDialog1.Color), 20, 20)
+        Using b As New SolidBrush(ColorDialog1.Color), f = FontDialog1.Font, g = e.Graphics
+            g.DrawString(RichTextBox1.Text, f, b, 20, 20)
+        End Using
     End Sub
 
     Private Sub PrintReviewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintReviewToolStripMenuItem.Click
