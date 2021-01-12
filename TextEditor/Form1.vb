@@ -4,10 +4,6 @@ Imports System.IO
 Imports System.Windows.Forms
 
 Public Class Form1
-    Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox1.TextChanged
-
-    End Sub
-
     Private Sub OpenToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem1.Click
         If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
             Using streamReader As New StreamReader(OpenFileDialog1.FileName)
@@ -50,5 +46,10 @@ Public Class Form1
 
     Private Sub PrintDocument1_PrintPage(sender As Object, e As PrintPageEventArgs) Handles PrintDocument1.PrintPage
         e.Graphics.DrawString(RichTextBox1.Text, FontDialog1.Font, New SolidBrush(ColorDialog1.Color), 20, 20)
+    End Sub
+
+    Private Sub PrintReviewToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintReviewToolStripMenuItem.Click
+        PrintPreviewDialog1.Document = PrintDocument1
+        PrintPreviewDialog1.ShowDialog()
     End Sub
 End Class
